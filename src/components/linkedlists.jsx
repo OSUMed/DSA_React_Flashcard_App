@@ -1,14 +1,22 @@
 import React from "react";
 import { useState } from "react";
 import { ShowQuestions } from "./showquestions";
-export const LinkedLists = ({ color }) => {
+export const LinkedLists = ({ color, questionSubject }) => {
   const [cardNumber, setCardNumber] = useState(0);
   const [questionList, setQuestionList] = useState(questions);
+  const [questionType, setQuestionType] = useState(questionSubject);
   return (
     <>
-      <h2>Linked Lists Questions {color}</h2>
+      <h2>
+        {questionType} Questions {color}
+      </h2>
       <h3> Number of Cards {cardNumber} </h3>
-      {questionList} && <ShowQuestions questionSet={questionList} />
+      {questionList} &&{" "}
+      <ShowQuestions
+        questionSet={questionList}
+        questionType={questionType}
+        color={color}
+      />
     </>
   );
 };

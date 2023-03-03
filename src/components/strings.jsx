@@ -1,14 +1,20 @@
 import React from "react";
 import { useState } from "react";
 import { ShowQuestions } from "./showquestions";
-export const Strings = ({ color }) => {
+export const Strings = ({ color, questionSubject }) => {
   const [cardNumber, setCardNumber] = useState(0);
   const [questionList, setQuestionList] = useState(questions);
+  const [questionType, setQuestionType] = useState(questionSubject);
   return (
     <>
       <h2>String Questions {color}</h2>
       <h3> Number of Cards {cardNumber} </h3>
-      <ShowQuestions questionSet={questionList} />
+      {questionList} &&{" "}
+      <ShowQuestions
+        questionSet={questionList}
+        questionType={questionSubject}
+        color={color}
+      />
     </>
   );
 };

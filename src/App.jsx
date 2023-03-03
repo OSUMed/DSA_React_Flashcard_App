@@ -38,13 +38,13 @@ function App() {
 
 const ShowProblems = ({ choice }) => {
   if (choice == "linkedlists") {
-    return <LinkedLists color="blue" />;
+    return <LinkedLists color="blue" questionType="linkedlists" />;
   }
   if (choice == "trees") {
-    return <Trees color="green" />;
+    return <Trees color="green" questionType="trees" />;
   }
   if (choice == "strings") {
-    return <Strings color="red" />;
+    return <Strings color="red" questionType="strings" />;
   }
 };
 export default App;

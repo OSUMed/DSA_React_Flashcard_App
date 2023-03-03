@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import { ShowQuestions } from "./showquestions";
-export const Strings = ({ color, questionType }) => {
+export const Strings = ({ questionType }) => {
   const [cardNumber, setCardNumber] = useState(0);
   const [questionList, setQuestionList] = useState(questions);
   console.log("question type is: ", questionType);
   return (
     <>
-      <h2>String Questions</h2>
-      <h3> Number of Cards {Object.entries(questions)}.length </h3>
+      <h2>String Questions: common string patterns in DSA technical exam questions</h2>
+      <h3> Number of Cards: 6 </h3>
 
       <ShowQuestions questionSet={questionList} questionType={questionType} />
     </>

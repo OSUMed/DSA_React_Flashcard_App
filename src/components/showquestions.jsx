@@ -8,6 +8,14 @@ export const ShowQuestions = ({ questionSet, questionType }) => {
   const [answer, setAnswer] = useState(questions[1].Answer);
   const [turnCard, setTurnCard] = useState(false);
   //   console.log(questions, question, answer);
+  const pickRandom = () => {
+    const integer = Math.floor(Math.random() * 6);
+    console.log("random integer is: ", integer);
+    setCardNumber(integer);
+    setQuestion(questions[integer].Question);
+    setAnswer(questions[integer].Answer);
+    setTurnCard(false);
+  };
   const nextQuestion = () => {
     if (cardNumber + 1 == questionSet.length) {
       setCardNumber(0);
@@ -34,7 +42,6 @@ export const ShowQuestions = ({ questionSet, questionType }) => {
     setAnswer(questions[cardNumber - 1].Answer);
     // setCardNumber((cardNumber) => cardNumber + 1);
   };
-  console.log("show question type is: ", questionType);
   return (
     <>
       <div className={"card card-" + questionType}>
@@ -44,6 +51,7 @@ export const ShowQuestions = ({ questionSet, questionType }) => {
       <button onClick={previousQuestion}>Previous Card</button>
       <button onClick={() => setTurnCard(() => !turnCard)}>Turn Card</button>
       <button onClick={nextQuestion}>Next Card</button>
+      <button onClick={pickRandom}>Pick Random Card</button>
     </>
   );
 };

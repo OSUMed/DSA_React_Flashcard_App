@@ -1,21 +1,18 @@
 import React from "react";
 import { useState } from "react";
 import { ShowQuestions } from "./showquestions";
-export const LinkedLists = ({ color, questionType }) => {
+export const LinkedLists = ({ questionType }) => {
   const [cardNumber, setCardNumber] = useState(0);
   const [questionList, setQuestionList] = useState(questions);
   return (
     <>
       <h2>
-        {questionType} Questions {color}
+        Linked List QuestionsQuestions: common linked list patterns in DSA
+        technical exam questions
       </h2>
-      <h3> Number of Cards {cardNumber} </h3>
-      {questionList} &&{" "}
-      <ShowQuestions
-        questionSet={questionList}
-        questionType={questionType}
-        color={color}
-      />
+      <h3> Number of Cards: 6 </h3>
+
+      <ShowQuestions questionSet={questionList} questionType={questionType} />
     </>
   );
 };

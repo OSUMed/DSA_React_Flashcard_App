@@ -1,19 +1,17 @@
 import React from "react";
 import { useState } from "react";
 import { ShowQuestions } from "./showquestions";
-export const Trees = ({ color, questionType }) => {
+export const Trees = ({ questionType }) => {
   const [cardNumber, setCardNumber] = useState(0);
   const [questionList, setQuestionList] = useState(questions);
   return (
     <>
-      <h2>Tree Questions {color}</h2>
-      <h3> Number of Cards {cardNumber} </h3>
-      {questionList} &&{" "}
-      <ShowQuestions
-        questionSet={questionList}
-        questionType={questionType}
-        color={color}
-      />
+      <h2>
+        Tree Questions: common tree patterns in DSA technical exam questions
+      </h2>
+      <h3> Number of Cards: 6 </h3>
+
+      <ShowQuestions questionSet={questionList} questionType={questionType} />
     </>
   );
 };

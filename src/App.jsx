@@ -1,8 +1,8 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { Window } from "./components/window";
-import { Trees } from "./components/Trees";
-import { LinkedLists } from "./components/LinkedLists";
+import { Trees } from "./components/trees";
+import { LinkedLists } from "./components/linkedlists";
 import "./App.css";
 
 function App() {
@@ -37,6 +37,14 @@ function App() {
 }
 
 const ShowProblems = ({ choice }) => {
-  return <h2>Hello World HII {choice}</h2>;
+  if (choice == "linkedlists") {
+    return <LinkedLists />;
+  }
+  if (choice == "trees") {
+    return <Trees />;
+  }
+  if (choice == "window") {
+    return <Window />;
+  }
 };
 export default App;

@@ -1,4 +1,11 @@
 import React from "react";
+import { useState } from "react";
 export const LinkedLists = () => {
-  return <h3> Window Problems </h3>;
+  const [cardNumber, setCardNumber] = useState(0);
+  return (
+    <>
+      <h2>LinkedLists Questions</h2>
+      <h3> Number of Cards {cardNumber} </h3>
+    </>
+  );
 };

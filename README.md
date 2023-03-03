@@ -1,30 +1,32 @@
-# Web Development Project 2 - _Name of App Here_
+# Web Development Project 2 - Leetcode Patterns
 
 Submitted by: **Srikanth Medicherla**
 
 This web app: **Leetcode Flashcards**
 
-Time spent: **X** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [ ] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [ ] **A list of card pairs is created**
-- [ ] **Clicking on the card shows the corresponding component of the information pair**
-- [ ] **Clicking the next button displays a random new card**
+- [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
+- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
+- [x] **A list of card pairs is created**
+- [x] **Clicking on the card shows the corresponding component of the information pair**
+- [x] **Clicking the next button displays a random new card**
 
 The following **optional** features are implemented:
 
 - [ ] Cards contains images in addition to or in place of text
-- [ ] Cards have different visual styles such as color based on their category
-  - [ ] _visual style implemented_
+- [x] Cards have different visual styles such as color based on their category
+  - [x] _visual style implemented_
 
 The following **additional** features are implemented:
 
 - [ ] List anything else that you added to improve the site's functionality!
+- [x] Buttons to go to previous card and next card in addition to "random" card
+- [x] Buttons to press different DSA subjects: strings, trees, or linkedlists
 
 ## Video Walkthrough
 
@@ -44,6 +46,8 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+- Problem rendering the Q/A array of objects. Needed to Google solution
 
 ## License
 

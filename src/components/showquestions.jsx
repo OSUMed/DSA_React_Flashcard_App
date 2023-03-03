@@ -44,7 +44,10 @@ export const ShowQuestions = ({ questionSet, questionType }) => {
   };
   return (
     <>
-      <div className={"card card-" + questionType}>
+      <div
+        className={"card card-" + questionType}
+        onClick={() => setTurnCard(() => !turnCard)}
+      >
         {!turnCard && question}
         {turnCard && answer}
       </div>

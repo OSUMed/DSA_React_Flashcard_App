@@ -20,43 +20,42 @@ export const LinkedLists = ({ questionType }) => {
 const questions = [
   {
     id: 0,
-    Question: "What is the fastest time complexity runtime for string problems",
-    Answer:
-      "O(1) soemtimes because there can only be 256 characters or 26 letter limit",
+    Question:
+      "Insertion and deletion into a linked list is what complexity vs arrays?",
+    Answer: "O(1). Arrays are O(n)",
   },
   {
     id: 1,
-    Question:
-      "What is the best way to keep a character count for string questions?",
+    Question: "What does a dummy node ensure?",
     Answer:
-      "using the ord(c) method you can do it in O(1) time. Don't need to do O(n)",
+      "Operations are never executed on the head or tail. Removes headache of conditional checks for edge cases",
   },
   {
     id: 2,
-    Question: "What is the best way to see if two strings are anagrams?",
-    Answer:
-      "sorting takes nlogn but can be faster with frequency counting--O(1) space if using ord",
+    Question: "To get the kth last node, where do our two pointers start at?",
+    Answer: "One is kth node ahead of the other one",
   },
   {
     id: 3,
-    Question: "Palindromes: best way?",
-    Answer: "jsut return s==s[::-1] BUT you can do 2 pointers too ",
+    Question: "How to detect a cycle in a linked list?",
+    Answer:
+      "Have two pointers where one moves twice the speed as the other. If they meet, cycle exists",
   },
   {
     id: 4,
-    Question: "To concatenate a string, how long is the runtime?",
-    Answer: "O(n)",
+    Question: "How to get the middle node of a linked list?",
+    Answer:
+      "Two pointers where one moves twice as fast. When faster reached end of the list, the slower will be at the middle node.",
   },
   {
     id: 5,
-    Question: "For 2sum, what are the different ways to do it?",
-    Answer:
-      "if you can sort, do 2 pointers. If you can't sort, use a dictionary and track Potential Answer ",
+    Question: "How are linked list and array questions similar?",
+    Answer: "You can use 2 pointer techniques with both",
   },
   {
     id: 6,
-    Question: "How do you use ord and chr?",
-    Answer:
-      "use ord to make it into a number and use chr to make it into a char",
+    Question:
+      "To reverse a linked list what pointers do you return at the end?",
+    Answer: "the previous pointer.",
   },
 ];

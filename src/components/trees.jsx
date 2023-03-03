@@ -1,10 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { ShowQuestions } from "./showquestions";
-export const Trees = ({ color, questionSubject }) => {
+export const Trees = ({ color, questionType }) => {
   const [cardNumber, setCardNumber] = useState(0);
   const [questionList, setQuestionList] = useState(questions);
-  const [questionType, setQuestionType] = useState(questionSubject);
   return (
     <>
       <h2>Tree Questions {color}</h2>

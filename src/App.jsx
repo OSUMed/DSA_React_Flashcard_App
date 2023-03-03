@@ -1,6 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { Strings } from "./components/strings";
+import { ShowQuestions } from "./components/showquestions";
 import { Trees } from "./components/trees";
 import { LinkedLists } from "./components/linkedlists";
 import "./App.css";

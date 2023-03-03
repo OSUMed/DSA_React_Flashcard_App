@@ -1,7 +1,7 @@
 import react from "react";
 import { useState } from "react";
 
-export const ShowQuestions = ({ questionSet, color, questionType }) => {
+export const ShowQuestions = ({ questionSet, questionType }) => {
   const [questions, setQuestions] = useState(Object.values(questionSet));
   const [cardNumber, setCardNumber] = useState(0);
   const [question, setQuestion] = useState(questions[0].Question);
@@ -13,11 +13,13 @@ export const ShowQuestions = ({ questionSet, color, questionType }) => {
       setCardNumber(0);
       setQuestion(questions[0].Question);
       setAnswer(questions[0].Answer);
+      setTurnCard(false);
       return;
     }
     setCardNumber(cardNumber + 1);
     setQuestion(questions[cardNumber + 1].Question);
     setAnswer(questions[cardNumber + 1].Answer);
+    setTurnCard(false);
     // setCardNumber((cardNumber) => cardNumber + 1);
   };
   const previousQuestion = () => {
@@ -32,10 +34,10 @@ export const ShowQuestions = ({ questionSet, color, questionType }) => {
     setAnswer(questions[cardNumber - 1].Answer);
     // setCardNumber((cardNumber) => cardNumber + 1);
   };
+  console.log("show question type is: ", questionType);
   return (
     <>
-      {" "}
-      <div className={"card-" + questionType}>
+      <div className={"card card-" + questionType}>
         {!turnCard && question}
         {turnCard && answer}
       </div>
@@ -45,12 +47,3 @@ export const ShowQuestions = ({ questionSet, color, questionType }) => {
     </>
   );
 };
-
-// {Object.values(questionSet).map((question) => {
-//     return (
-//       <>
-//         <h2>{question}</h2>
-//         <h2>{question.Answer}</h2>
-//       </>
-//     );
-//   })}

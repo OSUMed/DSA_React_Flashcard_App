@@ -1,6 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import { Window } from "./components/window";
+import { Strings } from "./components/strings";
 import { Trees } from "./components/trees";
 import { LinkedLists } from "./components/linkedlists";
 import "./App.css";
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <h3>Choose problem set:</h3>
-      <button onClick={() => problemSetUp("window")}>Window Problems</button>
+      <button onClick={() => problemSetUp("strings")}>String Problems</button>
       <button onClick={() => problemSetUp("trees")}>Tree Problems</button>
       <button onClick={() => problemSetUp("linkedlists")}>
         Linked List Problems
@@ -38,13 +38,13 @@ function App() {
 
 const ShowProblems = ({ choice }) => {
   if (choice == "linkedlists") {
-    return <LinkedLists />;
+    return <LinkedLists color="blue" />;
   }
   if (choice == "trees") {
-    return <Trees />;
+    return <Trees color="green" />;
   }
-  if (choice == "window") {
-    return <Window />;
+  if (choice == "strings") {
+    return <Strings color="red" />;
   }
 };
 export default App;

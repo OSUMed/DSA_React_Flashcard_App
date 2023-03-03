@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import { ShowQuestions } from "./showquestions";
-export const Trees = ({ color }) => {
+export const Strings = ({ color }) => {
   const [cardNumber, setCardNumber] = useState(0);
   const [questionList, setQuestionList] = useState(questions);
   return (
     <>
-      <h2>Trees Questions {color}</h2>
+      <h2>String Questions {color}</h2>
       <h3> Number of Cards {cardNumber} </h3>
-      {questionList} && <ShowQuestions questionSet={questionList} />
+      <ShowQuestions questionSet={questionList} />
     </>
   );
 };

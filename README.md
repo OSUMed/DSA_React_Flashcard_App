@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='./leetcode_flashcards2_attempt1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-Link: https://imgur.com/a/iHmueAs
+Link: https://imgur.com/a/YvgzkzA
 
 <!-- Replace this with whatever GIF tool you used! -->
 

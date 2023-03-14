@@ -7,6 +7,8 @@ export const ShowQuestions = ({ questionSet, questionType }) => {
   const [cardNumber, setCardNumber] = useState(0);
   const [question, setQuestion] = useState(questions[0].Question);
   const [answer, setAnswer] = useState(questions[1].Answer);
+  const [currentStreak, setCurrentStreak] = useState(0);
+  const [longestStreak, setLongestStreak] = useState(0);
   const [turnCard, setTurnCard] = useState(false);
   const [userAnswer, setUserAnswer] = useState("");
   const [divColor, setDivColor] = useState("black");
@@ -58,12 +60,17 @@ export const ShowQuestions = ({ questionSet, questionType }) => {
     console.log("What is submitted? ", e.value);
     const includesAnswer = answer.includes(userAnswer);
     console.log("the user answer is: ", includesAnswer, userAnswer);
-    if (includesAnswer) {
-      setDivColor("yellow");
-    } else if (!includesAnswer) {
-      setDivColor("red");
-    } else if (answer == userAnswer) {
+    if (answer === userAnswer) {
+      const maxStreak = Math.max(longestStreak, currentStreak + 1);
+      setLongestStreak(maxStreak);
       setDivColor("green");
+      setCurrentStreak(currentStreak + 1);
+      console.log(answer, userAnswer);
+    } else if (!includesAnswer) {
+      setCurrentStreak(0);
+      setDivColor("red");
+    } else if (includesAnswer) {
+      setDivColor("yellow");
     }
   };
   const divStyle = {
@@ -76,9 +83,11 @@ export const ShowQuestions = ({ questionSet, questionType }) => {
 
   return (
     <>
+      <h2>Current Streak: {currentStreak}</h2>
+      <h2>Longest Streak: {longestStreak}</h2>
       <div
         // style={{ borderColor: "purple", padding: "5px" }}
-        style={divStyle}
+
         className={"card card-" + questionType}
         onClick={() => setTurnCard(() => !turnCard)}
       >
@@ -91,13 +100,14 @@ export const ShowQuestions = ({ questionSet, questionType }) => {
       <button onClick={pickRandom}>Pick Random Card</button>
       <form onSubmit={handleSubmit}>
         <input
+          style={divStyle}
           type="text"
           name="name"
           placeholder="Place answer here"
           value={userAnswer}
           onChange={handleChange}
         ></input>
-        <button type="submit">Submit</button>
+        <button type="submit">Submit Guess</button>
         <p>
           Yellow Border = Partial Answer ; Green Border = "Complete Answer"; Red
           Border: "Answer is wrong"

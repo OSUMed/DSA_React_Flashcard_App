@@ -7,7 +7,9 @@ export const Strings = ({ questionType }) => {
   console.log("question type is: ", questionType);
   return (
     <>
-      <h2>String Questions: common string patterns in DSA technical exam questions</h2>
+      <h2>
+        String Questions: common string patterns in DSA technical exam questions
+      </h2>
       <h3> Number of Cards: 6 </h3>
 
       <ShowQuestions questionSet={questionList} questionType={questionType} />
@@ -19,8 +21,7 @@ const questions = [
   {
     id: 0,
     Question: "What is the fastest time complexity runtime for string problems",
-    Answer:
-      "O(1) soemtimes because there can only be 256 characters or 26 letter limit",
+    Answer: "O(1)",
   },
   {
     id: 1,

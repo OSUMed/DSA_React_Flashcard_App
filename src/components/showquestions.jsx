@@ -60,17 +60,19 @@ export const ShowQuestions = ({ questionSet, questionType }) => {
     console.log("What is submitted? ", e.value);
     const includesAnswer = answer.includes(userAnswer);
     console.log("the user answer is: ", includesAnswer, userAnswer);
-    if (answer === userAnswer) {
+    if (answer === userAnswer || includesAnswer) {
       const maxStreak = Math.max(longestStreak, currentStreak + 1);
       setLongestStreak(maxStreak);
-      setDivColor("green");
       setCurrentStreak(currentStreak + 1);
       console.log(answer, userAnswer);
+      if (answer === userAnswer) {
+        setDivColor("green");
+      } else if (includesAnswer) {
+        setDivColor("yellow");
+      }
     } else if (!includesAnswer) {
       setCurrentStreak(0);
       setDivColor("red");
-    } else if (includesAnswer) {
-      setDivColor("yellow");
     }
   };
   const divStyle = {

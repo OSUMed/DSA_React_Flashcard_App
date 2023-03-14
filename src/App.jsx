@@ -28,7 +28,7 @@ function App() {
       </button>
       {problemSet && (
         <div>
-          <span>Start {problemSet} problems? ==> </span>
+          <span>Start {problemSet} problems? Press Button on right: </span>
           <button onClick={() => setStartQuiz(true)}>Press OK to start</button>
         </div>
       )}

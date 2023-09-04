@@ -1,4 +1,4 @@
-# Web Development Project 3 - _Leetcode Patterns_
+# _Leetcode Patterns_
 
 Submitted by: **Srikanth Medicherla**
 
